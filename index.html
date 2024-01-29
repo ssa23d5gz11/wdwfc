@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> products Digital </title>
+    <title>Products Digital</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,6 +20,7 @@
 
         section {
             display: flex;
+            flex-wrap: wrap; /* تمكين السطر التلقائي عند الحاجة */
             justify-content: space-around;
             padding: 20px;
         }
@@ -29,6 +30,7 @@
             padding: 10px;
             margin: 10px;
             text-align: center;
+            width: 45%; /* تحديد عرض العنصر ليكون أقل قليلاً على الهواتف */
         }
 
         .cart {
@@ -37,12 +39,25 @@
             left: 0;
             background-color: #eee;
             padding: 10px;
+            width: 100%; /* توسيع السلة لتمتد عبر العرض */
+            box-sizing: border-box; /* تأكيد عدم إضافة هوامش إضافية */
+        }
+
+        img {
+            max-width: 100%; /* جعل الصور تتناسب مع عرض الشاشة */
+            height: auto;
+        }
+
+        @media (max-width: 600px) {
+            .product {
+                width: 100%; /* عندما يكون عرض الشاشة أقل من 600 بكسل، تمتد العناصر بالكامل */
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1> products Digital</h1>
+        <h1>Products Digital</h1>
         <img src="https://i.ibb.co/16jtRKf/products-Digital.png" alt="شعار المتجر">
     </header>
 
